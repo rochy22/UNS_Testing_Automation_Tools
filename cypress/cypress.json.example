@@ -1,0 +1,13 @@
+{
+"db": {
+    "userName": "Example_userName",
+    "password": "Example_password",
+    "server": "Example_server",
+    "options": {
+        "database": "Example_database",
+        "encrypt": true,
+        "rowCollectionOnRequestCompletion" : true
+    }
+},
+"baseUrl":"Example_URL"
+}
