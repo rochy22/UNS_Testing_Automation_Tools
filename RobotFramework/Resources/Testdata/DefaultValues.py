@@ -1,0 +1,29 @@
+# Default Values Test Data
+InvalidCharacters = "!@#$%^&*()"
+MesssageInvalidUsername = "Invalid Username: it must be lowercase, should not start with 'endpoint' or 'anyone'. Allowed characters: a-z, 0-9, '-', '_' and '.'"
+MesssageInvalidLength = "The field Username must be a string with a maximum length of 64.";
+DefaultAddress = "Address test";
+DefaultMobile = "1234";
+DefaultOfficePhone = "4321";
+DefaultEmail2 = "rosegovia_12343@mailinator.com";
+DefaultTitle = "Title test";
+DefaultSpecialtyId = 2;
+DefaultSpecialtyName = "Advanced Heart Failure and Transplant";
+DefaultComments = "Comments test";
+DefaultChallengeQuestionId = 13;
+DefaultChallengeQuestionTwoId = 6;
+DefaultServiceLine = "ServiceLine test";
+DefaultEmployer = 'Employer test'
+DefaultCity = 'City test'
+DefaultStateId = 3
+DefaultZip = 'ZIP test'
+DefaultCountryId = 236
+
+DefaultUsersGroupId = 1
+DefaultOrganizationLicenseId = 'd245070e-ae63-4162-b0f2-a26d2ad5f009'
+DefaultOrganizationProviderId = 'd245070e-ae63-4162-b0f2-a26d2ad5f009'
+DefaultPreferredTimezone = 'Alaskan Standard Time'
+DefaultNationalProviderIdentifier = '6134431389'
+DefaultEpicEmpId = '12345'
+DefaultConnectivityGroup = 'AAA+ITH+Production'
+DefaultOrganization = 'AdminCenterTest'
