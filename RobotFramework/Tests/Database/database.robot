@@ -20,7 +20,9 @@ RF_06 - Almacenamiento de elementos requeridos
     ${parametroEmail}=  Get From List    ${result}    1
 
     Click Button    ${SaveButtonLocator}
-    Verify Created User    username=qaarusername36    email=qaarusername36@mail.com    haveOptionals=FALSE
+    Click Button    //button[.//text() = 'Confirm']
+    Sleep   1s
+    Verify Created User    username=${parametrousername}    email=${parametroEmail}    haveOptionals=FALSE
     close browser
 
 RF_07 - Almacenamiento del usuario
@@ -32,7 +34,9 @@ RF_07 - Almacenamiento del usuario
     ${parametroEmail}=  Get From List    ${result}    1
 
     Click Button    ${SaveButtonLocator}
-    Verify Created User    username=rosegovia    email=rosegovia4321@mailinator.com    haveOptionals=TRUE
+    Click Button    //button[.//text() = 'Confirm']
+    Sleep   1s
+    Verify Created User    username=${parametrousername}    email=${parametroEmail}    haveOptionals=TRUE
     close browser
 *** Keywords ***
 

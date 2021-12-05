@@ -12,7 +12,7 @@ Variables  ../../Resources/Testdata/DefaultValues.py
 
 *** Test Cases ***
 RF_05 - Relacion entre Specialties y Robot PiP - default value= true
-    Open browser    ${FMSPortalBaseURL}   headlesschrome
+    Open browser    ${FMSPortalBaseURL}   ${Browser}
     Fill And Submit
     Go To Creation Page
     ${Specialty}=   getSpecialtyFromDatabase    PiPEnabled=TRUE
@@ -39,7 +39,7 @@ RF_05 - Relacion entre Specialties y Robot PiP - default value= true
 
 
 RF_06 - Relacion entre Specialties y Robot PiP - default value= false
-    Open browser    ${FMSPortalBaseURL}   headlesschrome
+    Open browser    ${FMSPortalBaseURL}   ${Browser}
     Fill And Submit
     Go To Creation Page
     ${Specialty}=   getSpecialtyFromDatabase    PiPEnabled=FALSE
