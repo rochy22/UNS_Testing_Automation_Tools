@@ -27,13 +27,13 @@ InputRandomUsername
 getUserFromDatabase
     [Arguments]    ${unconfirmed}=Null    ${enterprise}=Null
     Connect To Database    pymssql    ${DBName}    ${DBUser}    ${DBPass}    ${DBHost}    ${PORT}
-    ${output} =    Query   SELECT Username FROM FMS2.auth.Users where UserType=0 and Username='rosegovia';
+    ${output} =    Query   SELECT Username FROM FMS2.auth.Users where UserType=0;
 
     IF    "${unconfirmed}"=='TRUE'
-        ${output} =    Query   SELECT Username FROM FMS2.auth.UnconfirmedUsers where Username='core_qa_automation_unconfirmed_user_01';
+        ${output} =    Query   SELECT Username FROM FMS2.auth.UnconfirmedUsers;
     END
     IF    "${enterprise}"=='TRUE'
-        ${UserId} =    Query   SELECT UserId FROM FMS2.auth.HumanUsers where EnterpriseId is not NULL AND Email='testenterprise@mailinator.com';
+        ${UserId} =    Query   SELECT UserId FROM FMS2.auth.HumanUsers where EnterpriseId is not NULL;
         Log    ${UserId [0] [0]}
         ${output} =    Query   SELECT Username FROM FMS2.auth.Users where UserId='${UserId [0] [0]}'
         Log    ${output [0] [0]}
@@ -86,7 +86,7 @@ Fill Fields
         Sleep   1s
         Click Element    ${DefaultStateLocator}
         Input text    id:City    ${DefaultCity}
-       Input text    id:Address    ${DefaultAddress}
+        Input text    id:Address    ${DefaultAddress}
     END
 
     Click Link    xpath://*[@id="humanTabstrip"]/ul/li[2]/a
@@ -109,23 +109,23 @@ Fill Fields
     Click Element    ${ConnectivityGroupArrowLocator}
     Input text    ${ConnectivityGroupLocator}    ${DefaultConnectivityGroup}
     IF    "${haveOptionals}"=='TRUE'
-    Click Element    ${SoloLicenseArrowLocator}
-    Sleep   1s
-    Click Element    ${DefaultSoloLicenseLocator}
-    Input text    id:EpicEmpId    DefaultEpicEmpId
-    Select Checkbox    id:IsEmployee
-    Click Element    ${PreferredTimezoneArrowLocator}
-    Sleep   1s
-    Click Element    ${DefaultPreferredTimezoneLocator}
-    Input text    id:NationalProviderIdentifier    ${DefaultNationalProviderIdentifier}
-    Click Element    ${OrganizationProviderArrowLocator}
-    Sleep   1s
-    Click Element    ${DefaultOrganizationProviderLocator}
+        Click Element    ${SoloLicenseArrowLocator}
+        Sleep   1s
+        Click Element    ${DefaultSoloLicenseLocator}
+        Input text    id:EpicEmpId    ${DefaultEpicEmpId}
+        Select Checkbox    id:IsEmployee
+        Click Element    ${PreferredTimezoneArrowLocator}
+        Sleep   1s
+        Click Element    ${DefaultPreferredTimezoneLocator}
+        Input text    id:NationalProviderIdentifier    ${DefaultNationalProviderIdentifier}
+        Click Element    ${OrganizationProviderArrowLocator}
+        Sleep   1s
+        Click Element    ${DefaultOrganizationProviderLocator}
 
-    Click Element    ${OrganizationLicenseArrowLocator}
-    Sleep   1s
-    Click Element    ${DefaultOrganizationLicenseLocator}
-    Input text    ${UserGroupLocator}    core_qa_user_group_01
+        Click Element    ${OrganizationLicenseArrowLocator}
+        Sleep   1s
+        Click Element    ${DefaultOrganizationLicenseLocator}
+        Input text    ${UserGroupLocator}    ${DefaultUsersGroupName}
     END
 
 
@@ -138,10 +138,10 @@ Verify Created User
     ${output} =    Query   SELECT UserId FROM FMS2.auth.Users where Username='${username}';
     ${user} =    Query   SELECT * FROM FMS2.auth.HumanUsers where UserId='${output [0] [0]}';
     ${OrganizationIdFromDB} =    Query   SELECT OrganizationId FROM FMS2.fms.Organizations where SfName='${DefaultOrganization}';
-    Should Be Equal    ${user[0][1]}  First Name
-    Should Be Equal    ${user[0][2]}  Last Name
+    Should Be Equal    ${user[0][1]}  test
+    Should Be Equal    ${user[0][2]}  test
     Should Be Equal    ${user[0][6]}  ${email}
-    Should Be Equal    '${user[0][10]}'  '1'
+    Should Be Equal    '${user[0][10]}'  '${DefaultConnectivityGroupId}'
     Should Be Equal    '${user[0][32]}'    'True'
     IF    "${haveOptionals}"=='TRUE'
         Should Be Equal    ${user[0][3]}    ${DefaultAddress}
@@ -160,8 +160,8 @@ Verify Created User
         Should Be Equal    ${user[0][24]}    ${DefaultZip}
         Should Be Equal    ${user[0][25]}    ${DefaultCountryId}
         Should Be Equal    ${user[0][26]}    ${DefaultUsersGroupId}
-        #Should Be Equal    '${user[0][28]}'    '${OrganizationIdFromDB [0] [0]}'
-        #Should Be Equal    '${user[0][29]}'    '${OrganizationIdFromDB [0] [0]}'
+        Should Be Equal    '${user[0][28]}'    '${OrganizationIdFromDB [0] [0]}'
+        Should Be Equal    '${user[0][29]}'    '${OrganizationIdFromDB [0] [0]}'
         Should Be Equal    ${user[0][30]}    ${DefaultPreferredTimezone}
         Should Be Equal    '${user[0][31]}'    'True'
         Should Be Equal    '${user[0][33]}'    '${DefaultNationalProviderIdentifier}'

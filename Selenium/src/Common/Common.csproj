@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Configurations>Development;Staging;Integration</Configurations>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0-preview.6.20305.6" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+        <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.27.0" />
+        <PackageReference Include="Selenium.InternetExplorer.WebDriver" Version="3.150.1" />
+        <PackageReference Include="Selenium.Support" Version="4.1.0" />
+        <PackageReference Include="Selenium.WebDriver" Version="4.1.0" />
+        <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="96.0.4664.4500" />
+        <PackageReference Include="Selenium.WebDriver.MicrosoftWebDriver" Version="10.0.17134" />
+        <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="98.0.1081-pre" />
+        <PackageReference Include="xunit" Version="2.4.2-pre.12" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Config\Environment.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Config\TokenSecrets.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

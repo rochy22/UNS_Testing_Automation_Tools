@@ -1,0 +1,29 @@
+### Binaries
+obj
+bin
+
+### Packet Manager and Bundle
+node_modules/
+package-lock.json
+
+### Directories
+RegressionTests/TestResults/
+
+### Temporary
+/Local
+*.User
+*.Cache
+
+### Visual Studio
+.vs
+/config/Secrets.json
+/config/ConnectionStrings.json
+/config/SmtpSettings.json
+/src/FMS Web Portal/ConnectionStrings.json
+/src/Customers Portal/ConnectionStrings.json
+/src/Identity Provider/ConnectionStrings.json
+/src/FMS Web Portal/Secrets.json
+/src/Customers Portal/Secrets.json
+/src/Identity Provider/Secrets.json
+/src/Common/Config/TokenSecrets.json
+/src/Common/Config/Environment.json

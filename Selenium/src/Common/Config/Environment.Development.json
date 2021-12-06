@@ -1,0 +1,8 @@
+{
+  "CustomerPortalBaseURL": "http://localhost:80",
+  "FMSPortalBaseURL": "http://localhost:59237",
+  "IdentityProviderBaseURL": "http://localhost:8080",
+  "TokenEndpoint": "https://localhost:44314/connect/token",
+  "HeadlessMode": true,
+  "DriverType": "Chrome"
+}

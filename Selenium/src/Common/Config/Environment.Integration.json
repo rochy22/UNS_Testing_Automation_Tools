@@ -1,0 +1,8 @@
+{
+  "CustomerPortalBaseURL": "https://portal.ithdev.com/",
+  "FMSPortalBaseURL": "https://fmswebportal.ithdev.com",
+  "IdentityProviderBaseURL": "https://idprovider.ithdev.com",
+  "TokenEndpoint": "https://idprovider.ithdev.com/connect/token",
+  "HeadlessMode": true,
+  "DriverType": "Chrome"
+}

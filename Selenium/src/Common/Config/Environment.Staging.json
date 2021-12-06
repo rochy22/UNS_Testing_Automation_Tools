@@ -1,0 +1,8 @@
+{
+  "CustomerPortalBaseURL": "https://portal.intouchstaging.com/",
+  "FMSPortalBaseURL": "https://fmswebportal.intouchstaging.com",
+  "IdentityProviderBaseURL": "https://idprovider.intouchstaging.com",
+  "TokenEndpoint": "https://idprovider.intouchstaging.com/connect/token",
+  "HeadlessMode": true,
+  "DriverType": "Chrome"
+}

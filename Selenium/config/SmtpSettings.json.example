@@ -1,0 +1,10 @@
+{
+  "EmailSettings": {
+    "From": "<FROM>",
+    "Server": "<MAILSERVER>",
+    "ServerPort": "<PORT>",
+    "Username": "<USERNAME>",
+    "Password": "<PASSWORD>",
+    "EnableSsl": "<SSLENABLED>"
+  }
+}

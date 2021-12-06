@@ -19,11 +19,11 @@ DefaultStateId = 3
 DefaultZip = 'ZIP test'
 DefaultCountryId = 236
 
-DefaultUsersGroupId = 1
-DefaultOrganizationLicenseId = 'd245070e-ae63-4162-b0f2-a26d2ad5f009'
-DefaultOrganizationProviderId = 'd245070e-ae63-4162-b0f2-a26d2ad5f009'
+DefaultUsersGroupId = 111
+DefaultUsersGroupName = 'core_qa_user_group_01'
 DefaultPreferredTimezone = 'Alaskan Standard Time'
 DefaultNationalProviderIdentifier = '6134431389'
 DefaultEpicEmpId = '12345'
-DefaultConnectivityGroup = 'AAA+ITH+Production'
-DefaultOrganization = 'AdminCenterTest'
+DefaultConnectivityGroup = 'core_qa_cg_01'
+DefaultConnectivityGroupId = 993981
+DefaultOrganization = 'core_qa_organization_01'

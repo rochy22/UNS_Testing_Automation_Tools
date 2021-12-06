@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FMS Web Portal", "FMS Web Portal.csproj", "{C92C7117-24B7-4713-A461-614C6D02C736}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "..\Common\Common.csproj", "{8725F281-3A52-468E-A918-ED4BD3531A66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Context", "..\Context\Context.csproj", "{B289D151-3B50-4BCF-BFE3-DD5025378B64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Any CPU = Development|Any CPU
+		Integration|Any CPU = Integration|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C92C7117-24B7-4713-A461-614C6D02C736}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{C92C7117-24B7-4713-A461-614C6D02C736}.Development|Any CPU.Build.0 = Development|Any CPU
+		{C92C7117-24B7-4713-A461-614C6D02C736}.Integration|Any CPU.ActiveCfg = Integration|Any CPU
+		{C92C7117-24B7-4713-A461-614C6D02C736}.Integration|Any CPU.Build.0 = Integration|Any CPU
+		{C92C7117-24B7-4713-A461-614C6D02C736}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{C92C7117-24B7-4713-A461-614C6D02C736}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{8725F281-3A52-468E-A918-ED4BD3531A66}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{8725F281-3A52-468E-A918-ED4BD3531A66}.Development|Any CPU.Build.0 = Development|Any CPU
+		{8725F281-3A52-468E-A918-ED4BD3531A66}.Integration|Any CPU.ActiveCfg = Integration|Any CPU
+		{8725F281-3A52-468E-A918-ED4BD3531A66}.Integration|Any CPU.Build.0 = Integration|Any CPU
+		{8725F281-3A52-468E-A918-ED4BD3531A66}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{8725F281-3A52-468E-A918-ED4BD3531A66}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{B289D151-3B50-4BCF-BFE3-DD5025378B64}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{B289D151-3B50-4BCF-BFE3-DD5025378B64}.Development|Any CPU.Build.0 = Development|Any CPU
+		{B289D151-3B50-4BCF-BFE3-DD5025378B64}.Integration|Any CPU.ActiveCfg = Integration|Any CPU
+		{B289D151-3B50-4BCF-BFE3-DD5025378B64}.Integration|Any CPU.Build.0 = Integration|Any CPU
+		{B289D151-3B50-4BCF-BFE3-DD5025378B64}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{B289D151-3B50-4BCF-BFE3-DD5025378B64}.Staging|Any CPU.Build.0 = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B35C380F-EBA3-4320-954C-614EBAD03598}
+	EndGlobalSection
+EndGlobal

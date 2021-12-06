@@ -27,9 +27,9 @@ ConnectivityGroupArrowLocator = 'xpath://*[@id="humanTabstrip-3"]/table/tbody/tr
 ConnectivityGroupLocator = 'xpath://*[@id="humanTabstrip-3"]/table/tbody/tr[1]/td[2]/span[1]/span/input'
 
 OrganizationProviderArrowLocator = 'xpath://*[@id="humanTabstrip-3"]/table/tbody/tr[5]/td[2]/span[1]/span/span[2]/span'
-DefaultOrganizationProviderLocator = 'xpath://*[@id="OrganizationDropdown_listbox"]/li[4]'
+DefaultOrganizationProviderLocator = 'xpath://*[@id="OrganizationDropdown_listbox"]/li[47]'
 
 OrganizationLicenseArrowLocator = 'xpath://*[@id="humanTabstrip-3"]/table/tbody/tr[4]/td[2]/span[1]/span/span[2]/span'
-DefaultOrganizationLicenseLocator = 'xpath://*[@id="OrganizationLicenseDropdown_listbox"]/li[4]'
+DefaultOrganizationLicenseLocator = '//*[@id="OrganizationLicenseDropdown_listbox"]/li[47]'
 
 UserGroupLocator = 'xpath://*[@id="humanTabstrip-3"]/table/tbody/tr[2]/td[2]/span[1]/span/input'
