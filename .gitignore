@@ -1,3 +1,4 @@
 cypress/cypress.json
 cypress/cypress/fixtures/envValues.json
 cypress/node_modules
+Cucumber/node_modules
