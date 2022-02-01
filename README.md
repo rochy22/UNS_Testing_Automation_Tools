@@ -51,4 +51,29 @@ python -m robot username.robot
 ## Implementación en Cucumber:
 
 ### Instalación:
-Instalar WebdriverIO usando la consola de comandos: ```npm install webdriverio```
+1. Descargar e instalar Java (SDK) for developers desde https://www.oracle.com/
+2. Intalar Node js LTS	https://nodejs.org/en/download/
+3. Instalar Visual Studio Code desde https://code.visualstudio.com/
+
+Para iniciar un nuevo proyecto:
+1. Instalar WebdriverIO usando la consola de comandos: ```npm i webdriverio @wdio/cli```
+2. npm i wdio-chromedriver-service
+
+### Configuracion:
+Habilitar ejecución de archivos .ps1 en Windows. Para esto ejecutar desde PowerShell ```Set-ExecutionPolicy -Scope LocalMachine unrestricted```
+
+### Ejecución:
+En una consola de comandos ejecutar el siguiente comando:
+```
+cd ./Cucumber
+npx wdio run wdio.conf.js
+./node_modules/.bin/wdio ./wdio.conf.js
+```
+
+#### Configuracion extra:
+npx wdio run wdio.conf.js, 
+{
+            logFileName: 'wdio-chromedriver.log', // default
+            outputDir: 'driver-logs', // overwrites the config.outputDir
+            args: ['--silent']
+        }
