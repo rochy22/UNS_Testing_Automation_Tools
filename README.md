@@ -1,4 +1,4 @@
-# UNS - Testing Automation Tools
+﻿# UNS - Testing Automation Tools
 
 ## Implementación en Cypress:
 
@@ -60,20 +60,12 @@ Para iniciar un nuevo proyecto:
 2. npm i wdio-chromedriver-service
 
 ### Configuracion:
-Habilitar ejecución de archivos .ps1 en Windows. Para esto ejecutar desde PowerShell ```Set-ExecutionPolicy -Scope LocalMachine unrestricted```
+1.Habilitar ejecución de archivos .ps1 en Windows. Para esto ejecutar desde PowerShell ```Set-ExecutionPolicy -Scope LocalMachine unrestricted```
+2. Modificar el archivo tokenSecret.js dentro de la carpeta **\Cucumber\features\support**.
 
 ### Ejecución:
 En una consola de comandos ejecutar el siguiente comando:
 ```
 cd ./Cucumber
 npx wdio run wdio.conf.js
-./node_modules/.bin/wdio ./wdio.conf.js
 ```
-
-#### Configuracion extra:
-npx wdio run wdio.conf.js, 
-{
-            logFileName: 'wdio-chromedriver.log', // default
-            outputDir: 'driver-logs', // overwrites the config.outputDir
-            args: ['--silent']
-        }

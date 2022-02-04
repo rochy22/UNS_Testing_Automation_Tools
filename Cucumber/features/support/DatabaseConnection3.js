@@ -22,9 +22,9 @@ class DatabaseConnection3{
  
     getUser = async (commonUser,enabledUser) => {
       let useIDByQuery;
-      if(enabledUser) useIDByQuery=`SELECT TOP 1 UserId FROM [FMS2].[auth].[HumanUsers] WHERE IsEnabled=${enabledUser} and Email='core_qa_user_12@mailinator.com'`;//borrar ultima parte
-      else useIDByQuery=`SELECT TOP 1 UserId FROM [FMS2].[auth].[HumanUsers] WHERE IsEnabled=${enabledUser} and Email='core_qa_user_18@mailinator.com'`;//borrar ultima parte
-      if(!commonUser) useIDByQuery=`SELECT TOP 1 UserId FROM [FMS2].[auth].[HumanUsers] WHERE EnterpriseId is not null and Email='core_qa_user_10@mailinator.com'`;//borrar ultima parte
+      if(enabledUser) useIDByQuery=`SELECT TOP 1 UserId FROM [FMS2].[auth].[HumanUsers] WHERE IsEnabled=${enabledUser}`;
+      else useIDByQuery=`SELECT TOP 1 UserId FROM [FMS2].[auth].[HumanUsers] WHERE IsEnabled=${enabledUser}`;
+      if(!commonUser) useIDByQuery=`SELECT TOP 1 UserId FROM [FMS2].[auth].[HumanUsers] WHERE EnterpriseId is not null`;
       
       try {
           await sql.connect(sqlConfig);
@@ -59,12 +59,13 @@ verifyUser = async (email,onlyRequired) => {
   
   try {
       await sql.connect(sqlConfig);
-      const userSaved = await sql.query(useIDByQuery);
+      const userSaved = await sql.query(useIDByQuery);      
       const connectivityGroupSaved = await sql.query(connectivityGroupIdByQuery);
       const specialtySaved= await sql.query(SpecialtyIdByQuery);
       const stateSaved= await sql.query(StateIdByQuery);
       const usersGroupSaved= await sql.query(UsersGroupIdByQuery);
       const organizationsSaved= await sql.query(OrganizationsIdByQuery);
+      
 
       let valuesSavedCorrectly= (userSaved.recordset[0].FirstName== defaultValues.defaultFirstName) &&
               (userSaved.recordset[0].LastName==  defaultValues.defaultLastName)&&

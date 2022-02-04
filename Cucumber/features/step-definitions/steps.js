@@ -42,6 +42,7 @@ When(/^I input an (\w+) username$/, async (estado) => {
     let username= await DatabaseConnection3.getUser(commonUser,enabledUser);
     await CreationPage.setUsername(username);
     await CreationPage.setFirstName("test");
+    await browser.pause(600);
   });
 
 
@@ -138,20 +139,22 @@ When("I complete the required fields for a new user", async () => {
 
 Then("Required fields must have the expected value", async () => {
     await CreationPage.PersonalInformationLocator.click();
-    //await CreationPage.SaveButtonLocator.click();   NO SACAR
-    //await browser.pause(500);     NO SACAR
-    //await CreationPage.ConfirmButtonLocator.click();    NO SACAR
-    let email='core_qa_automation_user_mxs2n@mailinator.com'//await CreationPage.EmailLocator.getValue();
+    let email=await CreationPage.EmailLocator.getValue()
+    await CreationPage.SaveButtonLocator.click();
+    await browser.pause(500); 
+    await CreationPage.ConfirmButtonLocator.click();    
+    await browser.pause(500); 
     let result=await DatabaseConnection3.verifyUser(email,true);
     expect(result).to.be.true;
   });  
 
   Then("All fields must have the expected value", async () => {
     await CreationPage.PersonalInformationLocator.click();
-    //await CreationPage.SaveButtonLocator.click();   NO SACAR
-    //await browser.pause(500);     NO SACAR
-    //await CreationPage.ConfirmButtonLocator.click();    NO SACAR
-    let email='core_qa_automation_user_c9ao4@mailinator.com'//await CreationPage.EmailLocator.getValue();
+    let email=await CreationPage.EmailLocator.getValue();
+    await CreationPage.SaveButtonLocator.click();
+    await browser.pause(500);  
+    await CreationPage.ConfirmButtonLocator.click(); 
+    await browser.pause(500);    
     let result=await DatabaseConnection3.verifyUser(email,false);
     expect(result).to.be.true;
   }); 
